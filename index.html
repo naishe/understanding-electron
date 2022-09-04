@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Hello from Electron renderer!</title>
+  </head>
+  <body>
+    <h1>Hello from Electron renderer!</h1>
+    <p>👋</p>
+    <p id="info"></p>
+    <!-- <p><strong>Select a folder with left images</strong></p>
+    <button type="button" id="leftImages">Select</button>
+    File path: <strong id="filePath"></strong> -->
+
+    <div class="file-selector-block">
+      <div class="left-files">
+        <div class="select-button">
+          <button type="button" id="leftImages">Select</button>
+          <span id="filePath">No folder selected</span>
+        </div>
+        <div class="file-display" id="leftFiles">
+          <span>No Files</span>
+        </div>
+      </div>
+      <div class="left-files">
+        <div class="select-button">
+          <button type="button" id="leftImages">Select</button>
+          <span id="filePath">No folder selected</span>
+        </div>
+        <div class="file-display" id="leftFiles">
+          <span>No Files</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./renderer.js"></script>
+</html>
